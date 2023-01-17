@@ -39,7 +39,7 @@ with open(election_data_csv) as csvfile:
       vote_percent = round(vote_percent,3)
       #print(candidate) to check 
       #print(vote_percent) to check work
-    #print(total_votes) to check 
+      #print(final_results[candidate_name]) #to check 
       
 winner = max(final_results, key=final_results.get) # key function learned with tutor Asiha Braxton-Garvin
   #print(winner) to check 
@@ -49,7 +49,7 @@ with open(output_text, "w") as csvfile:
     f"Election Results \n" 
     f"---------------- \n"
     f"Total Votes: {total_votes} \n"
-    f"{candidate}: %{vote_percent} ({total_votes}) \n"
+    f"{candidate}: %{vote_percent} ({final_results[candidate_name]}) \n"
     f"Winner: {winner} \n")
 
   print(election_results_final)
